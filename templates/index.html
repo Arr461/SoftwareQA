@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 3/4</title>
+  </head>
+
+  <body>
+      <form action="/retirement" method="post">
+        <h2>Retirement Calculation</h2>
+        <h2>Current Age</h2>
+        <input type="text" name="c_age"></input> 
+        <h2>Annual Salary</h2>
+        <input type="text" name="a_salary"></input>
+        <h2>Savings Goal</h2>
+        <input type="text" name="s_goal"></input>
+        <h2>Percentage Saved</h2>
+        <input type="text" name="p_saved"></input>
+        
+        <input type="submit" value="Submit"></input>
+    </form>
+    <h2>Results {{ r_answer }}</h2>
+    
+    <form action="/bmi" method="post">
+        <h2>BMI Calculation</h2>
+        <h2>Feet and Inches (seperated by a space)</h2>
+        <input type="text" name="f_inches"></input> 
+        <h2>Weight ( in Kilograms )</h2>
+        <input type="text" name="c_weight"></input>
+        <input type="submit" value="Submit"></input>
+    </form>
+   <h2>Results {{ b_answer }}</h2>
+  </body>
+</html>
