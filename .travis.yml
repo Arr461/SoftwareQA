@@ -9,7 +9,7 @@ install:
   - pip install Flask
 
 script:
-  - pytest test_QA_Assignment.py
+  - python -m unittest tests.test_example
   - coverage run test_QA_Assignment.py
   
 after_success:
