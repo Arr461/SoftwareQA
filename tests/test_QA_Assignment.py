@@ -6,7 +6,7 @@
 # Imports
 import unittest
 from unittest.mock import MagicMock, patch
-from .src import QA_Assignment
+from src.QA_Assignment import *
 
 # Test Class
 class Test_Function_QA_Assignment(unittest.TestCase):
