@@ -13,4 +13,4 @@ script:
   - coverage run test_QA_Assignment.py
   
 after_success:
-  - coveralls
+  - coveralls test_QA_Assignment.py
