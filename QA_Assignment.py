@@ -24,7 +24,7 @@ from flask import Flask
     #return primary
     
 # Calculate Retirement
-def retirement(primary):
+def retirement():
 
     # Inputs from user
     c_age = int(input("Please enter your current age: "))
@@ -50,7 +50,7 @@ def retirement(primary):
     return(age_met)
 
 # Calculate BMI 
-def BMI(primary):
+def BMI():
 
     # User input and Calculate BMI
     feet_inches = input("How many feet and inches are you? (Seperate by a space)").split()
@@ -75,7 +75,7 @@ def BMI(primary):
     return (actual_BMI)
 
 # Parser function for command line    
-def parser(primary):
+def parser():
 
     parser = argparse.ArgumentParser()
 
@@ -91,10 +91,10 @@ def parser(primary):
 
     # Determines which argument is true 
     if args.Retirement:
-        retirement(primary)
+        retirement()
 
     if args.BodyMassIndex:
-        BMI(primary)
+        BMI()
 
 # Main Function        
 def main():
@@ -103,6 +103,6 @@ def main():
     # primary = menu()
 
     # Parse command argument
-    parser(primary)
+    parser()
 
 main()
