@@ -1,1 +1,1 @@
-from .src import QA_Assignment
+from src.QA_Assignment import *
