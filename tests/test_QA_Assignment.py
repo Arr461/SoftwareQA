@@ -6,7 +6,7 @@
 # Imports
 import unittest
 from unittest.mock import MagicMock, patch
-from QA_Assignment import retirement, BMI
+from .QA_Assignment import retirement, BMI
 
 # Test Class
 class Test_Function_QA_Assignment(unittest.TestCase):
