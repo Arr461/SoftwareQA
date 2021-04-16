@@ -7,7 +7,6 @@
 import argparse
 from consolemenu import *
 from consolemenu.items import *
-from getch import getch, pause
 from flask import Flask
 
 # Fucntion to populate Menu    
