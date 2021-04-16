@@ -8,6 +8,7 @@ install:
 
 script:
   - python -m unittest tests.test_example
+  - pytest test_QA_Assignment.py
   - coverage run test_QA_Assignment.py
   
 after_success:
