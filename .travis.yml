@@ -8,3 +8,4 @@ install:
 
 script:
   - python -m unittest tests.test_example
+  - coveralls
