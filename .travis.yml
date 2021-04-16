@@ -9,7 +9,8 @@ install:
   - pip install Flask
 
 script:
-  - coverage run test_QA_Assignment.py test
+  - coverage run test_QA_Assignment.py
+  
   
 after_success:
   - coveralls
