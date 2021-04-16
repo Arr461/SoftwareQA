@@ -10,18 +10,18 @@ from consolemenu.items import *
 from flask import Flask
 
 # Fucntion to populate Menu    
-def menu():
+#def menu():
     
-    menu = ConsoleMenu("QA Assignment 2", "Assignment done in Python 3.9.2")
-    command_retire = CommandItem("Retirement Calculation",  ".\QA_Assignment.py -r")
-    menu.append_item(command_retire)
-    command_BMI = CommandItem("BodyMassIndex Calculation",  ".\QA_Assignment.py -b")
-    menu.append_item(command_BMI)
+   #menu = ConsoleMenu("QA Assignment 2", "Assignment done in Python 3.9.2")
+    #command_retire = CommandItem("Retirement Calculation",  ".\QA_Assignment.py -r")
+    #menu.append_item(command_retire)
+    #command_BMI = CommandItem("BodyMassIndex Calculation",  ".\QA_Assignment.py -b")
+    #menu.append_item(command_BMI)
     
-    primary = menu
+    #primary = menu
 
     # Pass primary for every function to show menu
-    return primary
+    #return primary
     
 # Calculate Retirement
 def retirement(primary):
@@ -45,7 +45,7 @@ def retirement(primary):
         print("Saving age exceeds 100 years of age...\n")
         
     
-    primary.show()
+    #primary.show()
 
     return(age_met)
 
@@ -70,7 +70,7 @@ def BMI(primary):
         print("You are classified as: Obese ({})\n".format(actual_BMI))
 
     
-    primary.show()
+    #primary.show()
 
     return (actual_BMI)
 
@@ -100,7 +100,7 @@ def parser(primary):
 def main():
 
     # Create Menu
-    primary = menu()
+    # primary = menu()
 
     # Parse command argument
     parser(primary)
