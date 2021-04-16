@@ -8,4 +8,4 @@ install:
 
 script:
   - python -m unittest tests.test_example
-  - python pytest test_QA_Assignment.py
+  - pytest test_QA_Assignment
