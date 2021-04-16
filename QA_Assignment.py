@@ -45,7 +45,7 @@ def retirement(primary):
     else:
         print("Saving age exceeds 100 years of age...\n")
         
-    pause("Please press any key to continue...")
+    
     primary.show()
 
     return(age_met)
@@ -70,7 +70,7 @@ def BMI(primary):
     elif actual_BMI > 30:
         print("You are classified as: Obese ({})\n".format(actual_BMI))
 
-    pause("Please press any key to continue...")
+    
     primary.show()
 
     return (actual_BMI)
