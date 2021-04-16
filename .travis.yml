@@ -9,4 +9,6 @@ install:
 script:
   - python -m unittest tests.test_example
   - coverage run test_QA_Assignment.py
+  
+after_success:
   - coveralls
