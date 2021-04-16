@@ -10,21 +10,21 @@ from consolemenu.items import *
 from flask import Flask
 
 # Fucntion to populate Menu    
-#def menu():
-    
-   #menu = ConsoleMenu("QA Assignment 2", "Assignment done in Python 3.9.2")
-    #command_retire = CommandItem("Retirement Calculation",  ".\QA_Assignment.py -r")
-    #menu.append_item(command_retire)
-    #command_BMI = CommandItem("BodyMassIndex Calculation",  ".\QA_Assignment.py -b")
-    #menu.append_item(command_BMI)
-    
-    #primary = menu
+def menu():
+
+    menu = ConsoleMenu("QA Assignment 2", "Assignment done in Python 3.9.2")
+    command_retire = CommandItem("Retirement Calculation",  ".\QA_Assignment.py -r")
+    menu.append_item(command_retire)
+    command_BMI = CommandItem("BodyMassIndex Calculation",  ".\QA_Assignment.py -b")
+    menu.append_item(command_BMI)
+
+    primary = menu
 
     # Pass primary for every function to show menu
-    #return primary
-    
+    return primary
+
 # Calculate Retirement
-def retirement():
+def retirement(primary):
 
     # Inputs from user
     c_age = int(input("Please enter your current age: "))
@@ -43,14 +43,14 @@ def retirement():
         print("Savings age goal will be: {}\n".format(age_met))
     else:
         print("Saving age exceeds 100 years of age...\n")
-        
-    
-    #primary.show()
+
+    pause("Please press any key to continue...")
+    primary.show()
 
     return(age_met)
 
 # Calculate BMI 
-def BMI():
+def BMI(primary):
 
     # User input and Calculate BMI
     feet_inches = input("How many feet and inches are you? (Seperate by a space)").split()
@@ -69,13 +69,13 @@ def BMI():
     elif actual_BMI > 30:
         print("You are classified as: Obese ({})\n".format(actual_BMI))
 
-    
-    #primary.show()
+    pause("Please press any key to continue...")
+    primary.show()
 
     return (actual_BMI)
 
 # Parser function for command line    
-def parser():
+def parser(primary):
 
     parser = argparse.ArgumentParser()
 
@@ -91,18 +91,18 @@ def parser():
 
     # Determines which argument is true 
     if args.Retirement:
-        retirement()
+        retirement(primary)
 
     if args.BodyMassIndex:
-        BMI()
+        BMI(primary)
 
 # Main Function        
 def main():
 
     # Create Menu
-    # primary = menu()
+    primary = menu()
 
     # Parse command argument
-    parser()
+    parser(primary)
 
 main()
